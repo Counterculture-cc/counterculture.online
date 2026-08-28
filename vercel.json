@@ -12,7 +12,7 @@
   "redirects": [
     {
       "source": "/give",
-      "destination": "/give",
+      "destination": "/#give",
       "permanent": false
     }
   ]
