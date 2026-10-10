@@ -1,4 +1,62 @@
 {
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/home",
+      "permanent": false
+    },
+    {
+      "source": "/interested.html",
+      "destination": "/interested",
+      "permanent": false
+    },
+    {
+      "source": "/index",
+      "destination": "/home",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/home",
+      "permanent": false
+    },
+    {
+      "source": "/faqs.html",
+      "destination": "/faqs",
+      "permanent": false
+    },
+    {
+      "source": "/what-we-believe.html",
+      "destination": "/what-we-believe",
+      "permanent": false
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": false
+    },
+    {
+      "source": "/terms-and-conditions.html",
+      "destination": "/terms-and-conditions",
+      "permanent": false
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": false
+    },
+    {
+      "source": "/connect",
+      "destination": "/contact",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/interested",
@@ -7,13 +65,66 @@
     {
       "source": "/home",
       "destination": "/index.html"
-    }
-  ],
-  "redirects": [
+    },
+    {
+      "source": "/join",
+      "destination": "/index.html"
+    },
     {
       "source": "/give",
-      "destination": "/#give",
-      "permanent": false
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/why-this-city",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/faqs",
+      "destination": "/faqs.html"
+    },
+    {
+      "source": "/what-we-believe",
+      "destination": "/what-we-believe.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ]
 }
