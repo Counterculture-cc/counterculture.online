@@ -964,6 +964,13 @@ button{font-family:inherit;}
 .site-footer__social-list a:hover{
   color:var(--white); border-color:var(--maroon); background-color:rgba(153,40,40,0.14);
 }
+.site-footer__nav{ display:flex; gap:clamp(28px,5vw,64px); align-items:flex-start; }
+.site-footer__links{ display:flex; flex-direction:column; align-items:flex-end; gap:10px; text-align:right; }
+.site-footer__links a{
+  font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+  color:rgba(255,255,255,0.45); text-decoration:none;
+}
+.site-footer__links a:hover, .site-footer__links a:focus-visible{ color:var(--maroon); }
 .site-footer__bottom{
   max-width:1180px; margin:20px auto 0;
   display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;
@@ -976,6 +983,8 @@ button{font-family:inherit;}
   .site-footer{ padding:48px 20px 24px; }
   .site-footer__inner{ flex-direction:column; align-items:flex-start; gap:28px; }
   .site-footer__brand{ align-items:flex-start; text-align:left; }
+  .site-footer__links{ align-items:flex-start; text-align:left; }
+  .site-footer__nav{ gap:40px; }
   .site-footer__bottom{ flex-direction:column; align-items:flex-start; gap:8px; }
 }
 
@@ -1269,7 +1278,7 @@ button{font-family:inherit;}
       <article class="gather-card">
         <p class="gather-card__date"><span class="gather-card__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9.5H21" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 3V6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16.5 3V6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>DECEMBER 5, 2026</p>
         <p class="gather-card__title">START HERE &times; OPEN HEAVEN</p>
-        <div class="gather-card__event"><p class="gather-card__event-name">START HERE</p><p class="gather-card__event-sub">VISION &amp; INTEREST NIGHT</p><p class="gather-card__event-time">Doors Open: 3:30 PM</p></div><div class="gather-card__event"><p class="gather-card__event-name">OPEN HEAVEN</p><p class="gather-card__event-time">Doors Open: 5:30 PM</p></div>
+        <div class="gather-card__event"><p class="gather-card__event-name">START HERE</p><p class="gather-card__event-time">Doors Open: 3:30 PM</p></div><div class="gather-card__event"><p class="gather-card__event-name">OPEN HEAVEN</p><p class="gather-card__event-time">Doors Open: 5:30 PM</p></div>
         <p class="gather-card__venue">Venue: Backyard Warehouse Studio</p>
       </article>
     </div>
@@ -1309,7 +1318,7 @@ button{font-family:inherit;}
   <div class="culture__head">
     <!-- Replace this src with your Culture Code header GIF -->
     <h2 class="culture__title hdr-duo"><span class="hdr-duo__main hdr-duo__brunson">Culture</span><span class="hdr-duo__accent hdr-duo__editorial">Code</span></h2>
-    <p class="culture__sub">The Kingdom of God is designed to allow for different churches to exist, enabling different types of people to thrive in various cultures. These ten phrases describe the soil in which we believe God will cause people to grow in COUNTER CULTURE. We do not want these to be mere programs or classes that we run, but convictions and principles ingrained in who we are; values that will be prioritized and practiced in the life of our church community.</p>
+    <p class="culture__sub">Our Culture Code names 10 phrases that describe who we are and defines the countercultural identity we are actively growing into; a distinct way of living that has marked the movement of believers from the very beginning. We do not claim perfection, but we hold these values with fierce conviction.</p>
   </div>
   <div class="culture__carousel" id="cultureCarousel">
     <div class="culture__viewport">
@@ -1417,7 +1426,7 @@ button{font-family:inherit;}
 <section class="vision why-city" id="why-this-city">
   <div class="why-city__head">
     <h2 class="why-city__title hdr-duo"><span class="hdr-duo__main hdr-duo__brunson">Why This</span><span class="hdr-duo__accent hdr-duo__editorial">City</span></h2>
-    <p class="why-city__place">Quezon City / North Avenue Area</p>
+    <p class="why-city__place"> North Ave/ Quezon Ave Area</p>
     <p class="why-city__lead">Located at the convergence of three major cities with 7 million people within a 5km radius, the North Ave &amp; Quezon Ave intersection is one of Metro Manila&rsquo;s premier strategic crossroads.</p>
     <ul class="why-city__points">
       <li><strong>High-Volume Transit Hub:</strong> Connects central rail lines and key roadways, driving unrivaled daily foot traffic of over 1,000,000 commuters, workers, professionals, and students.</li>
@@ -1447,7 +1456,7 @@ button{font-family:inherit;}
       </div>
     </div>
     <div class="vision__right">
-      <p class="vision__copy vision__copy--main">We are responding to a call to partner with the Holy Spirit in pioneering <span class="vision__highlight">a church for all ages</span> in <span class="vision__highlight">Quezon City</span> (around the North Ave. area) with a desire <span class="vision__highlight">to impact Metro Manila</span> where a community <span class="vision__highlight">pursues encountering God in an experiential way, leading to true heart transformation.</span></p>
+      <p class="vision__copy vision__copy--main">We are responding to a call to partner with the Holy Spirit in pioneering <span class="vision__highlight">a church for all ages</span> in <span class="vision__highlight">Quezon City</span> (Around the Quezon Ave/ North Ave Area) with a desire <span class="vision__highlight">to impact Metro Manila</span> where a community <span class="vision__highlight">pursues encountering God in an experiential way, leading to true heart transformation.</span></p>
       <p class="vision__copy vision__copy--sub">We are devoted to seeing an army of disciples, leaders, pastors, and ministers rise up to see the power of God change the culture around us through Bible-based, expository, and revelatory teaching and preaching, and spirit-empowered prayer and worship.</p>
       <p class="vision__copy vision__copy--sub">In the years to come, we will develop teams, services, events, programs, conferences, and eventually schools where encountering the Holy Spirit leads to the equipping and empowering of His people to live out the message of Jesus.</p>
     </div>
@@ -1524,6 +1533,20 @@ button{font-family:inherit;}
     <div class="site-footer__brand">
       <!-- TEMP placeholder — swap src for your logo file once it's uploaded -->
       <img class="site-footer__logo" src="logo.png" alt="Counterculture — Church for the Hungry &amp; Curious" loading="lazy">
+    </div>
+    <div class="site-footer__nav">
+    <nav class="site-footer__links" aria-label="Site">
+      <a href="#join">Join</a>
+      <a href="#give">Give &amp; Pray</a>
+      <a href="#why-this-city">Why This City</a>
+      <a href="#connect">Connect</a>
+    </nav>
+    <nav class="site-footer__links" aria-label="Legal">
+      <a href="/faqs">FAQs</a>
+      <a href="/what-we-believe">What We Believe</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+    </nav>
     </div>
   </div>
   <div class="site-footer__bottom">
@@ -1701,7 +1724,7 @@ button{font-family:inherit;}
     },
     {
       items: [
-        { title: "Crew Getaway", body: "Extended and extensive time away with the core crew in the beginning of the year to spiritually prepare for the next season as the front liners of the community." },
+        { title: "Community Getaway", body: "Extended and extensive time away with the core crew in the beginning of the year to spiritually prepare for the next season as the front liners of the community." },
         { title: "Launch Lead Up", body: "Combination of training & equipping, outreach events, pop-up worship & ministry nights, and other activities leading up to Launch Sunday." },
         { title: "Launch Sunday", body: "A history marker for the community as we celebrate our first-ever Sunday service." },
       ]
@@ -2200,6 +2223,30 @@ button{font-family:inherit;}
 
 })();
 
+</script>
+<script>
+/* Clean URLs: /home /join /give /about /why-this-city /contact all serve this one page.
+   The path decides which section to scroll to; clicking a section link updates the address bar. */
+(function(){
+  var ROUTES = { '/home':'top', '/join':'join', '/give':'give', '/about':'about', '/why-this-city':'why-this-city', '/contact':'connect' };
+  var HASH2PATH = { '#top':'/home', '#join':'/join', '#give':'/give', '#about':'/about', '#why-this-city':'/why-this-city', '#connect':'/contact' };
+  function go(id, smooth){
+    var el = document.getElementById(id); if(!el) return;
+    var nav = document.querySelector('.navbar');
+    var y = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - ((nav ? nav.offsetHeight : 0) - 8);
+    window.scrollTo({ top:y, behavior: smooth ? 'smooth' : 'auto' });
+  }
+  function setPath(p){ try{ history.replaceState(null,'',p); }catch(e){} }
+  window.addEventListener('load', function(){
+    var id = ROUTES[location.pathname.replace(/\/$/,'')];
+    if(id && id !== 'top') setTimeout(function(){ go(id,false); }, 150);
+  });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
+    var h = a.getAttribute('href'); if(!HASH2PATH[h]) return;
+    e.preventDefault(); go(h.slice(1), true); setPath(HASH2PATH[h]);
+  }, true);
+})();
 </script>
 </body>
 </html>
