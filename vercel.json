@@ -68,23 +68,23 @@
     },
     {
       "source": "/join",
-      "destination": "/index.html"
+      "destination": "/#join"
     },
     {
       "source": "/give",
-      "destination": "/index.html"
+      "destination": "/#give"
     },
     {
       "source": "/about",
-      "destination": "/index.html"
+      "destination": "/#about"
     },
     {
       "source": "/why-this-city",
-      "destination": "/index.html"
+      "destination": "/#why-this-city"
     },
     {
       "source": "/contact",
-      "destination": "/index.html"
+      "destination": "/#connect"
     },
     {
       "source": "/faqs",
