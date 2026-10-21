@@ -6,13 +6,15 @@
 <meta name="description" content="Looking for a community? Something new is happening in Quezon City. COUNTER CULTURE launches in 2027 near North Ave. and Quezon Ave. Come be part of the story.">
 <title>COUNTER CULTURE | Church for the Hungry &amp; Curious </title>
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://counterculture.online/">
+<link rel="canonical" href="https://www.counterculture.online/">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="COUNTER CULTURE">
 <meta property="og:title" content="COUNTER CULTURE — A Church for the Hungry &amp; Curious">
-<meta property="og:description" content="Official website of COUNTER CULTURE CHURCH INC., a non-stock, non-profit religious corporation registered with the SEC of the Philippines. Quezon City, Philippines.">
-<meta property="og:url" content="https://counterculture.online/">
-<meta property="og:image" content="https://counterculture.online/logo.png">
+<meta property="og:description" content="Looking for a community? Something new is happening in Quezon City. COUNTER CULTURE launches in 2027 near North Ave. and Quezon Ave. Come be part of the story.">
+<meta property="og:url" content="https://www.counterculture.online/">
+<meta property="og:image" content="https://www.counterculture.online/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- Structured data: facts taken from the SEC Certificate of Incorporation and BIR Form 2303. -->
 <script type="application/ld+json">
@@ -21,14 +23,14 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://counterculture.online/#organization",
+      "@id": "https://www.counterculture.online/#organization",
       "legalName": "COUNTER CULTURE CHURCH INC.",
       "name": "COUNTER CULTURE",
       "alternateName": [
         "Counter Culture Church"
       ],
-      "url": "https://counterculture.online/",
-      "logo": "https://counterculture.online/logo.png",
+      "url": "https://www.counterculture.online/",
+      "logo": "https://www.counterculture.online/logo.png",
       "slogan": "A Church for the Hungry & Curious",
       "description": "COUNTER CULTURE is a Christian church community based in Quezon City, Philippines, operated by COUNTER CULTURE CHURCH INC., a non-stock, non-profit religious corporation registered with the Securities and Exchange Commission (SEC) of the Philippines.",
       "email": "info@counterculture.online",
@@ -56,12 +58,13 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://counterculture.online/#website",
-      "url": "https://counterculture.online/",
+      "@id": "https://www.counterculture.online/#website",
+      "url": "https://www.counterculture.online/",
       "name": "COUNTER CULTURE",
+      "alternateName": "Counter Culture Church",
       "description": "The official website of COUNTER CULTURE CHURCH INC.",
       "publisher": {
-        "@id": "https://counterculture.online/#organization"
+        "@id": "https://www.counterculture.online/#organization"
       }
     }
   ]
@@ -2339,11 +2342,13 @@ button{font-family:inherit;}
 
 </script>
 <script>
-/* Clean URLs: /home /join /give /about /why-this-city /contact all serve this one page.
-   The path decides which section to scroll to; clicking a section link updates the address bar. */
+/* Clean URLs: /join /give /about /why-this-city /contact (and /connect) serve this one page.
+   The path decides which section to open. Layout keeps shifting while the page settles
+   (pinned carousel, lazy embeds), so we re-aim until it is stable or the visitor scrolls. */
 (function(){
-  var ROUTES = { '/home':'top', '/join':'join', '/give':'give', '/about':'about', '/why-this-city':'why-this-city', '/contact':'connect' };
-  var HASH2PATH = { '#top':'/home', '#join':'/join', '#give':'/give', '#about':'/about', '#why-this-city':'/why-this-city', '#connect':'/connect' };
+  var ROUTES = { '/':'top', '/home':'top', '/join':'join', '/give':'give', '/about':'about', '/why-this-city':'why-this-city', '/contact':'connect', '/connect':'connect' };
+  var HASH2PATH = { '#top':'/', '#join':'/join', '#give':'/give', '#about':'/about', '#why-this-city':'/why-this-city', '#connect':'/contact' };
+  if('scrollRestoration' in history){ try{ history.scrollRestoration = 'manual'; }catch(e){} }
   function go(id, smooth){
     var el = document.getElementById(id); if(!el) return;
     var nav = document.querySelector('.navbar');
@@ -2351,10 +2356,25 @@ button{font-family:inherit;}
     window.scrollTo({ top:y, behavior: smooth ? 'smooth' : 'auto' });
   }
   function setPath(p){ try{ history.replaceState(null,'',p); }catch(e){} }
-  window.addEventListener('load', function(){
-    var id = ROUTES[location.pathname.replace(/\/$/,'')];
-    if(id && id !== 'top') setTimeout(function(){ go(id,false); }, 150);
-  });
+
+  var path = location.pathname.replace(/\/+$/,'') || '/';
+  var initial = ROUTES[path];
+  if(initial && initial !== 'top'){
+    var stopped = false, started = Date.now(), timer = null;
+    function stop(){ stopped = true; if(timer) clearInterval(timer); }
+    ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){
+      window.addEventListener(ev, stop, { passive:true, once:true });
+    });
+    function aim(){
+      if(stopped) return;
+      go(initial, false);
+      if(Date.now() - started > 3500) stop();
+    }
+    function begin(){ aim(); timer = setInterval(aim, 150); }
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', begin);
+    else begin();
+  }
+
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
     var h = a.getAttribute('href'); if(!HASH2PATH[h]) return;
