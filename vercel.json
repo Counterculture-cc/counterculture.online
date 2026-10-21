@@ -53,7 +53,7 @@
     },
     {
       "source": "/connect",
-      "destination": "/contact",
+      "destination": "/connect",
       "permanent": false
     }
   ],
