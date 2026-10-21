@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/",
+      "destination": "/home",
       "permanent": false
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "source": "/connect",
-      "destination": "/connect",
+      "destination": "/contact",
       "permanent": false
     }
   ],
@@ -68,23 +68,23 @@
     },
     {
       "source": "/join",
-      "destination": "/#join"
+      "destination": "/index.html"
     },
     {
       "source": "/give",
-      "destination": "/#give"
+      "destination": "/index.html"
     },
     {
       "source": "/about",
-      "destination": "/#about"
+      "destination": "/index.html"
     },
     {
       "source": "/why-this-city",
-      "destination": "/#why-this-city"
+      "destination": "/index.html"
     },
     {
       "source": "/contact",
-      "destination": "/#connect"
+      "destination": "/index.html"
     },
     {
       "source": "/faqs",
@@ -124,21 +124,6 @@
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         }
-        {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(join|give|about|why-this-city|contact|connect)",
-      "destination": "/index.html"
-    }
-  ]
-}
       ]
     }
   ]
