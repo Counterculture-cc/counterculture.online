@@ -3,8 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="COUNTERCULTURE is a church plant for the hungry and curious, launching in Quezon City, Metro Manila in 2027.">
-<title>COUNTERCULTURE — Church for the Hungry & Curious</title>
+<meta name="description" content="Official website of COUNTER CULTURE CHURCH INC., an SEC-registered non-stock, non-profit religious corporation in Quezon City, Philippines. A Church for the Hungry &amp; Curious.">
+<title>COUNTER CULTURE — A Church for the Hungry &amp; Curious | COUNTER CULTURE CHURCH INC.</title>
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://counterculture.online/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="COUNTER CULTURE">
+<meta property="og:title" content="COUNTER CULTURE — A Church for the Hungry &amp; Curious">
+<meta property="og:description" content="Official website of COUNTER CULTURE CHURCH INC., a non-stock, non-profit religious corporation registered with the SEC of the Philippines. Quezon City, Philippines.">
+<meta property="og:url" content="https://counterculture.online/">
+<meta property="og:image" content="https://counterculture.online/logo.png">
+<meta name="twitter:card" content="summary">
+<!-- Structured data: facts taken from the SEC Certificate of Incorporation and BIR Form 2303. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://counterculture.online/#organization",
+      "legalName": "COUNTER CULTURE CHURCH INC.",
+      "name": "COUNTER CULTURE",
+      "alternateName": [
+        "Counter Culture Church"
+      ],
+      "url": "https://counterculture.online/",
+      "logo": "https://counterculture.online/logo.png",
+      "slogan": "A Church for the Hungry & Curious",
+      "description": "COUNTER CULTURE is a Christian church community based in Quezon City, Philippines, operated by COUNTER CULTURE CHURCH INC., a non-stock, non-profit religious corporation registered with the Securities and Exchange Commission (SEC) of the Philippines.",
+      "email": "info@counterculture.online",
+      "foundingDate": "2026-06-24",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "SEC Company Registration No. (Philippines)",
+        "value": "2026060256202-21"
+      },
+      "taxID": "809-522-367-00000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "28 Rugnan Street, Nia Village, Sauyo",
+        "addressLocality": "Quezon City",
+        "addressRegion": "Metro Manila",
+        "postalCode": "1116",
+        "addressCountry": "PH"
+      },
+      "sameAs": [
+        "https://www.instagram.com/countercultureph",
+        "https://www.facebook.com/counter.culturecc/",
+        "https://www.threads.com/@counter.culturecc",
+        "https://www.tiktok.com/@countercultureph"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://counterculture.online/#website",
+      "url": "https://counterculture.online/",
+      "name": "COUNTER CULTURE",
+      "description": "The official website of COUNTER CULTURE CHURCH INC.",
+      "publisher": {
+        "@id": "https://counterculture.online/#organization"
+      }
+    }
+  ]
+}
+</script>
 <style>
 /* ============================================================
    COUNTERCULTURE — DESIGN TOKENS
@@ -1185,6 +1247,33 @@ button{font-family:inherit;}
 .social-card__fallback{ border:1px solid rgba(255,255,255,0.1); }
 .social-card__frame{ border:0; }
 .social-card__tt{ overflow-y:auto; border:1px solid rgba(255,255,255,0.1); }
+/* ============================================================
+   ORGANIZATION TRANSPARENCY ADDITIONS
+   Reuses existing tokens (colors, fonts, card style). Adds only the
+   few rules needed for the legal-identity blocks, the screen-reader
+   heading, and the footer legal text. No existing rule is changed.
+   ============================================================ */
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.org-facts{ max-width:1100px; margin:72px auto 0; padding-top:56px; border-top:1px solid var(--grey-line); position:relative; z-index:1; text-align:left; }
+.org-facts__heading{ font-family:var(--font-display); font-size:clamp(40px,7vw,64px); font-weight:400; line-height:0.95; letter-spacing:-0.08em; margin:0 0 40px; color:var(--grey-light); padding-top:0.12em; gap:0.28em; }
+@media (max-width:400px){ .org-facts__heading{ font-size:32px; } }
+.org-facts__cols{ display:grid; grid-template-columns:1.15fr 1fr; gap:64px; align-items:start; }
+.org-facts__statement{ font-family:var(--font-body); font-size:17px; line-height:1.6; font-weight:500; color:var(--white); margin:0 0 40px; padding:22px 26px; border:1px solid var(--maroon); border-left:4px solid var(--maroon); border-radius:12px; background:rgba(153,40,40,0.08); }
+.org-facts__statement strong{ font-weight:800; }
+.org-facts__sub{ font-family:var(--font-newaustin), var(--font-script); font-style:italic; color:var(--maroon); font-size:clamp(26px,3.6vw,40px); line-height:1; margin:0 0 14px; }
+.org-facts__lead{ font-family:var(--font-body); font-size:16.5px; line-height:1.7; color:rgba(255,255,255,0.62); margin:0; }
+.org-facts__grid{ margin:0; display:grid; gap:20px; font-family:var(--font-body); }
+.org-facts__row{ padding-left:18px; border-left:2px solid var(--maroon); }
+.org-facts__grid dt{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:0 0 6px; }
+.org-facts__grid dd{ margin:0; font-size:16.5px; line-height:1.5; color:var(--white); word-break:break-word; }
+.org-facts a{ color:var(--white); text-underline-offset:3px; }
+.org-facts a:hover{ color:var(--maroon); }
+@media (max-width:860px){
+  .org-facts{ margin-top:56px; padding-top:44px; }
+  .org-facts__cols{ grid-template-columns:1fr; gap:40px; }
+}
+@media (max-width:520px){ .org-facts__grid dd{ font-size:15px; } .org-facts__grid a{ font-size:14px; } }
+.site-footer__legal{ display:flex; flex-direction:column; gap:4px; }
 </style>
 </head>
 <body>
@@ -1226,8 +1315,8 @@ button{font-family:inherit;}
 <!-- NAVIGATION -->
 <nav class="navbar" id="navbar">
   <div class="navbar__bar">
-    <a href="#top" class="navbar__logo" aria-label="countercultuure Church, back to top">
-      <img src="logo.png" alt="counterculture Church logo">
+    <a href="#top" class="navbar__logo" aria-label="COUNTER CULTURE — back to top">
+      <img src="logo.png" alt="COUNTER CULTURE logo">
     </a>
     <button type="button" class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navbarList" aria-label="Open menu">
       <span aria-hidden="true">&#9776;</span>
@@ -1245,6 +1334,7 @@ button{font-family:inherit;}
 
 <!-- HERO -->
 <header class="hero" id="top">
+  <h1 class="sr-only">COUNTER CULTURE &mdash; A Church for the Hungry &amp; Curious</h1>
   <div class="hero__bg" id="heroBg">
     <!-- Replaceable background: this GIF is the full landing page visual
          (logo + artwork baked in). Swap the src below for your own.
@@ -1253,7 +1343,7 @@ button{font-family:inherit;}
            <video autoplay muted loop playsinline>
              <source src="landpage.mp4" type="video/mp4">
            </video> -->
-    <img src="landpage.gif" alt="counterculture Church landing page" class="hero__bg-gif" decoding="async">
+    <img src="landpage.gif" alt="COUNTER CULTURE — A Church for the Hungry &amp; Curious" class="hero__bg-gif" decoding="async">
   </div>
   <div class="hero__scrim"></div>
 </header>
@@ -1420,6 +1510,23 @@ button{font-family:inherit;}
       </div>
     </div>
   </div>
+    <div class="org-facts" id="official-organization">
+      <h3 class="org-facts__heading hdr-duo"><span class="hdr-duo__accent hdr-duo__editorial">Our</span><span class="hdr-duo__main hdr-duo__brunson">Organization</span></h3>
+      <div class="org-facts__cols">
+        <div class="org-facts__text">
+          <p class="org-facts__statement">COUNTER CULTURE is the public name of our church. <strong>COUNTER CULTURE CHURCH INC.</strong>, a non-stock, non-profit religious corporation registered with the Securities and Exchange Commission (SEC) of the Philippines, owns and operates counterculture.online.</p>
+          <p class="org-facts__sub">Our Mission</p>
+          <p class="org-facts__lead">Chasing God encounters that change us and the culture around us. As we prepare for our launch in 2027, we&rsquo;re already gathering, praying, and doing life together as a growing community of leaders and team members, with open nights and outreach for anyone hungry or curious who wants to come and see what God is doing.</p>
+        </div>
+        <dl class="org-facts__grid">
+          <div class="org-facts__row"><dt>Organization</dt><dd>COUNTER CULTURE CHURCH INC.</dd></div>
+          <div class="org-facts__row"><dt>Charity ID</dt><dd>2026060256202-21 (SEC Registration No.)</dd></div>
+          <div class="org-facts__row"><dt>Address</dt><dd>28 Rugnan Street, Nia Village, Sauyo, Quezon City 1116, Philippines</dd></div>
+          <div class="org-facts__row"><dt>Email</dt><dd><a href="mailto:info@counterculture.online">info@counterculture.online</a></dd></div>
+          <div class="org-facts__row"><dt>Senior Pastors</dt><dd>Paul &amp; Janine Carolino</dd></div>
+        </dl>
+      </div>
+    </div>
 </section>
 
 <!-- WHY THIS CITY -->
@@ -1470,12 +1577,14 @@ button{font-family:inherit;}
     <div class="connect__cards">
 
       <article class="social-card">
-        <header class="social-card__head"><h3 class="social-card__name">Instagram</h3><p class="social-card__handle">@counter.culturecc</p></header>
+        <header class="social-card__head"><h3 class="social-card__name">Instagram</h3><p class="social-card__handle">@countercultureph</p></header>
         <div class="social-card__preview" id="igPreview">
-          <div class="social-card__fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg><p class="social-card__fb-handle">@counter.culturecc</p><a class="social-card__fb-link" href="https://www.instagram.com/counter.culturecc" target="_blank" rel="noopener">View on Instagram</a></div>
-          <iframe class="social-card__frame" title="Instagram — @counter.culturecc" src="https://www.instagram.com/counter.culturecc/embed" loading="lazy" allowtransparency="true"></iframe>
+          <div class="social-card__fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg><p class="social-card__fb-handle">@countercultureph</p><a class="social-card__fb-link" href="https://www.instagram.com/countercultureph" target="_blank" rel="noopener">View on Instagram</a></div>
+          <iframe class="social-card__frame" title="Instagram — @countercultureph" src="https://www.instagram.com/countercultureph/embed" loading="lazy" allowtransparency="true"></iframe>
         </div>
-        <div class="social-card__actions"><a class="btn-pill btn-pill--primary" href="https://www.instagram.com/counter.culturecc" target="_blank" rel="noopener">Follow</a></div>
+        <div class="social-card__actions">
+          <a class="btn-pill btn-pill--primary" href="https://www.instagram.com/countercultureph" target="_blank" rel="noopener">Follow</a>
+          <a class="btn-pill btn-pill--outline" href="https://ig.me/countercultureph" target="_blank" rel="noopener">Send a message</a></div>
       </article>
 
       <article class="social-card">
@@ -1491,16 +1600,16 @@ button{font-family:inherit;}
       </article>
 
       <article class="social-card">
-        <header class="social-card__head"><h3 class="social-card__name">TikTok</h3><p class="social-card__handle">@counterculture__</p></header>
+        <header class="social-card__head"><h3 class="social-card__name">TikTok</h3><p class="social-card__handle">@countercultureph</p></header>
         <div class="social-card__preview" id="ttPreview">
-          <div class="social-card__fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3v10.2a3.2 3.2 0 1 1-3.2-3.2"/><path d="M14.5 3c.3 2.4 1.9 4 4.5 4.2"/></svg><p class="social-card__fb-handle">@counterculture__</p><a class="social-card__fb-link" href="https://www.tiktok.com/@counterculture__" target="_blank" rel="noopener">View on TikTok</a></div>
+          <div class="social-card__fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3v10.2a3.2 3.2 0 1 1-3.2-3.2"/><path d="M14.5 3c.3 2.4 1.9 4 4.5 4.2"/></svg><p class="social-card__fb-handle">@countercultureph</p><a class="social-card__fb-link" href="https://www.tiktok.com/@countercultureph" target="_blank" rel="noopener">View on TikTok</a></div>
           <div class="social-card__tt" id="ttEmbed">
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@counterculture__" data-unique-id="counterculture__" data-embed-type="creator"><section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@counterculture__?refer=creator_embed">@counterculture__</a></section></blockquote>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@countercultureph" data-unique-id="countercultureph" data-embed-type="creator"><section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@countercultureph?refer=creator_embed">@countercultureph</a></section></blockquote>
           </div>
         </div>
         <div class="social-card__actions">
-          <a class="btn-pill btn-pill--primary" href="https://www.tiktok.com/@counterculture__" target="_blank" rel="noopener">Follow</a>
-          <a class="btn-pill btn-pill--outline" href="https://www.tiktok.com/@counterculture__" target="_blank" rel="noopener">Watch more</a>
+          <a class="btn-pill btn-pill--primary" href="https://www.tiktok.com/@countercultureph" target="_blank" rel="noopener">Follow</a>
+          <a class="btn-pill btn-pill--outline" href="https://www.tiktok.com/@countercultureph" target="_blank" rel="noopener">Watch more</a>
         </div>
       </article>
 
@@ -1517,10 +1626,10 @@ button{font-family:inherit;}
     <div class="site-footer__social connect__follow">
       <p class="site-footer__label">Follow Along</p>
       <ul class="site-footer__social-list">
-        <li><a href="https://www.instagram.com/counter.culturecc" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="https://www.instagram.com/countercultureph" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
         <li><a href="https://www.facebook.com/counter.culturecc/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14.5 21v-7.2h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H9.1v2.8h2.4V21"/></svg></a></li>
         <li><a href="https://www.threads.com/@counter.culturecc" target="_blank" rel="noopener" aria-label="Threads"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></a></li>
-        <li><a href="https://www.tiktok.com/@counterculture__" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3v10.2a3.2 3.2 0 1 1-3.2-3.2"/><path d="M14.5 3c.3 2.4 1.9 4 4.5 4.2"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@countercultureph" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3v10.2a3.2 3.2 0 1 1-3.2-3.2"/><path d="M14.5 3c.3 2.4 1.9 4 4.5 4.2"/></svg></a></li>
       </ul>
     </div>
   </div>
@@ -1532,14 +1641,15 @@ button{font-family:inherit;}
   <div class="site-footer__inner">
     <div class="site-footer__brand">
       <!-- TEMP placeholder — swap src for your logo file once it's uploaded -->
-      <img class="site-footer__logo" src="logo.png" alt="Counterculture — Church for the Hungry &amp; Curious" loading="lazy">
+      <img class="site-footer__logo" src="logo.png" alt="COUNTER CULTURE — A Church for the Hungry &amp; Curious" loading="lazy">
     </div>
     <div class="site-footer__nav">
     <nav class="site-footer__links" aria-label="Site">
       <a href="#join">Join</a>
       <a href="#give">Give &amp; Pray</a>
+      <a href="#about">About</a>
       <a href="#why-this-city">Why This City</a>
-      <a href="#connect">Connect</a>
+      <a href="#connect">Contact</a>
     </nav>
     <nav class="site-footer__links" aria-label="Legal">
       <a href="/faqs">FAQs</a>
@@ -1550,8 +1660,12 @@ button{font-family:inherit;}
     </div>
   </div>
   <div class="site-footer__bottom">
-    <p class="site-footer__copy">&copy; <span id="footerYear"></span> COUNTER CULTURE CHURCH INC. All rights reserved.</p>
-    <p class="site-footer__copy"> Quezon City, Philippines</p>
+    <div class="site-footer__legal">
+      <p class="site-footer__copy">&copy; <span id="footerYear">2026</span> COUNTER CULTURE CHURCH INC. All rights reserved.</p>
+      <p class="site-footer__copy">Non-stock, non-profit religious corporation</p>
+      <p class="site-footer__copy">Charity ID: 2026060256202-21</p>
+      <p class="site-footer__copy">28 Rugnan Street, Nia Village, Sauyo, Quezon City 1116, Philippines</p>
+    </div>
   </div>
 </footer>
 
@@ -2101,7 +2215,7 @@ button{font-family:inherit;}
   // Our Accountability Structure — dropdown items, same style as FAQ boxes
   const ACCOUNTABILITY = [
     { title: "Board of Trustees", body: "We are governed by a Board of Trustees composed of individuals of high integrity, including mature Christians with backgrounds in missions, ministry, and business ownership." },
-    { title: "Legal and Financial Standing", body: "Counter Culture is operated by COUNTER CULTURE CHURCH INC., a non-stock, non-profit corporation registered with the Securities and Exchange Commission (SEC) of the Philippines. <p> We maintain the applicable business permits and Bureau of Internal Revenue (BIR) registration and documentation required for our operations and are preparing for PCNC accreditation in the future. </p> <p> counterculture.online is the official website and primary online domain of COUNTER CULTURE CHURCH INC. " },
+    { title: "Legal and Financial Standing", body: "We maintain the applicable business permits and Bureau of Internal Revenue (BIR) registration and documentation required for our operations and are preparing for PCNC accreditation in the future." },
     { title: "Spiritual Oversight", body: "We are under the apostolic covering and advisory board of established, senior church leaders who provide ongoing spiritual accountability and guidance." },
   ];
   const accountabilityGroup = document.getElementById('accountabilityCols');
