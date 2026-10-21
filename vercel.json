@@ -124,6 +124,21 @@
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         }
+        {
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(join|give|about|why-this-city|contact|connect)",
+      "destination": "/index.html"
+    }
+  ]
+}
       ]
     }
   ]
