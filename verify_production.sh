@@ -26,7 +26,7 @@ n=$(echo "$h" | grep -o 'name="description"' | wc -l); [ "$n" = 1 ] && ok "exact
 echo "$h" | grep -qi 'noindex' && bad "noindex found" || ok "no noindex"
 
 echo "4) Favicons (as Googlebot)"
-for f in favicon.ico favicon-48x48.png favicon-96x96.png apple-touch-icon.png logo.png; do
+for f in favicon.ico favicon-48x48.png favicon-96x96.png apple-touch-icon.png logo.png logo-512.png; do
   c=$(curl -s -o /dev/null -w '%{http_code}' -A "$GB" "$PREF/$f"); [ "$c" = 200 ] && ok "/$f -> 200" || bad "/$f -> $c"
 done
 
@@ -35,3 +35,7 @@ r=$(curl -s -A "$GB" "$PREF/robots.txt"); echo "$r" | grep -qiE '^Disallow: */ *
 echo "$r" | grep -qi "sitemap: $PREF/sitemap.xml" && ok "robots.txt lists sitemap" || bad "robots.txt missing Sitemap line"
 c=$(curl -s -o /dev/null -w '%{http_code}' "$PREF/sitemap.xml"); [ "$c" = 200 ] && ok "sitemap.xml -> 200" || bad "sitemap.xml -> $c"
 curl -s "$PREF/sitemap.xml" | grep -qF "<loc>$PREF/</loc>" && ok "sitemap contains homepage" || bad "sitemap missing homepage"
+
+echo "6) /interested (Typeform redirect): informational only, intentionally NOT in the sitemap"
+read -r c loc < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "$PREF/interested")
+echo "  INFO /interested -> $c $loc"
