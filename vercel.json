@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/home",
+      "destination": "/",
       "permanent": false
     },
     {
